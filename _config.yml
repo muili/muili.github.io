@@ -76,3 +76,7 @@ exclude:
     - LICENSE
     - README.md
     - CNAME
+
+# libs CDN
+libs:
+  angularjs: //ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js
