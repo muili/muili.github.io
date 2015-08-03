@@ -17,7 +17,7 @@ var g=p.modules,m=o.module,d=document;
 p.m=function(k){try{m(k)}catch(e){return true}};
 p.g=function(k){return(g.indexOf(k)!==-1)};
 p.bootstrap=function(elm){
-angular.forEach(g,function(z,i){
+o.forEach(g,function(z,i){
 z.config(function($interpolateProvider){
 $interpolateProvider.startSymbol('{[').endSymbol(']}');
 });
