@@ -20,11 +20,10 @@ p.bootstrap=function(elm){!g||o.bootstrap(elm||d,g);g=[]};
 p.module=function(k,a,f){
 p.g(k)||!p.m(k)||!g.push(k)||m(k,a||[],f);
 var z=m(k);
-/*
 z.config(function($interpolateProvider){
-$interpolateProvider.startSymbol('{#').endSymbol('#}');
+$interpolateProvider.startSymbol('{[');
+$interpolateProvider.endSymbol(']}');
 });
-*/
 return z};
 o.ex=p;
 o.element(d).ready(function(){p.bootstrap(d.body)});
