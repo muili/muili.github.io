@@ -5,7 +5,7 @@ layout: default
 <article itemscope itemtype="http://schema.org/BlogPosting">
 <h1 itemtype="headline">{{ page.title }}</h1>
 <div>
-<time itemprop="datePublished">{{ page.date | date: "%Y-%m-%dT%H:%M:%S%z" }}</time>
+<time itemprop="datePublished">{{ page.created | date: "%Y-%m-%dT%H:%M:%S%z" }}</time>
 </div>
 {% if page.tags %}
 <div itemprop="articleSection">
