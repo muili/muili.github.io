@@ -1,0 +1,32 @@
+{% for lib in page.libs %}
+{% assign k = lib[0] %}
+{% assign v = lib[1] %}
+{% case k %}
+
+{% when 'angularjs' %}
+{% if v == 'auto' %}{% assign v = '1.4.3' %}{% endif %}
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/{{v}}/angular.min.js"></script>
+<script>
+'use strict';
+/*
+//@ sourceMappingURL=angular.min.js.map
+*/
+(function(o){
+var p={modules:[]};
+var g=p.modules,m=o.module,d=document; 
+p.m=function(k){try{m(k)}catch(e){return true}};
+p.g=function(k){return(g.indexOf(k)!==-1)};
+p.bootstrap=function(elm){!g||o.bootstrap(elm||d,g);g=[]};
+p.module=function(k,a,f){
+p.g(k)||!p.m(k)||!g.push(k)||m(k,a||[],f);
+var z=m(k);
+z.config(function($interpolateProvider){
+$interpolateProvider.startSymbol('{#').endSymbol('#}');
+});
+return z};
+o.ex=p;
+o.element(d).ready(function(){p.bootstrap(d.body)});
+}(angular));
+</script>
+{% endcase %}
+{% endfor %}
