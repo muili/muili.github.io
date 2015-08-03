@@ -16,11 +16,12 @@ var p={modules:[]};
 var g=p.modules,m=o.module,d=document; 
 p.m=function(k){try{m(k)}catch(e){return true}};
 p.g=function(k){return(g.indexOf(k)!==-1)};
-p.bootstrap=function(elm){!g||o.bootstrap(elm||d,g);
-!g||angular.foreach(g,function(z,i){
+p.bootstrap=function(elm){
+angular.forEach(g,function(z,i){
 z.config(function($interpolateProvider){
 $interpolateProvider.startSymbol('{[').endSymbol(']}');
 });
+!g||o.bootstrap(elm||d,g);
 });
 };
 p.module=function(k,a,f){p.g(k)||!p.m(k)||!g.push(k)||m(k,a||[],f);return m(k)};
